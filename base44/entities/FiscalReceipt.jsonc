@@ -1,0 +1,145 @@
+{
+  "name": "FiscalReceipt",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string",
+      "title": "Organiza\u00e7\u00e3o"
+    },
+    "professional_id": {
+      "type": "string",
+      "title": "Profissional"
+    },
+    "appointment_id": {
+      "type": "string",
+      "title": "Consulta"
+    },
+    "payment_id": {
+      "type": "string",
+      "title": "Pagamento"
+    },
+    "patient_id": {
+      "type": "string",
+      "title": "Paciente"
+    },
+    "financial_responsible_id": {
+      "type": "string",
+      "title": "Respons\u00e1vel Financeiro"
+    },
+    "issuer_name": {
+      "type": "string",
+      "title": "Nome do Emissor"
+    },
+    "issuer_cpf": {
+      "type": "string",
+      "title": "CPF do Emissor"
+    },
+    "issuer_professional_registration": {
+      "type": "string",
+      "title": "CRP/Registro"
+    },
+    "payer_name": {
+      "type": "string",
+      "title": "Nome do Pagador"
+    },
+    "payer_cpf": {
+      "type": "string",
+      "title": "CPF do Pagador"
+    },
+    "beneficiary_name": {
+      "type": "string",
+      "title": "Nome do Benefici\u00e1rio"
+    },
+    "beneficiary_cpf": {
+      "type": "string",
+      "title": "CPF do Benefici\u00e1rio"
+    },
+    "beneficiary_birth_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Data de Nascimento"
+    },
+    "service_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Data do Atendimento"
+    },
+    "payment_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Data do Pagamento"
+    },
+    "amount": {
+      "type": "number",
+      "title": "Valor"
+    },
+    "description": {
+      "type": "string",
+      "title": "Descri\u00e7\u00e3o"
+    },
+    "official_receipt_number": {
+      "type": "string",
+      "title": "N\u00famero Oficial"
+    },
+    "official_protocol": {
+      "type": "string",
+      "title": "Protocolo Oficial"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "awaiting_payment",
+        "awaiting_data",
+        "ready_to_issue",
+        "in_assisted_issuance",
+        "issued",
+        "divergent",
+        "cancelled",
+        "under_accounting_review"
+      ],
+      "default": "awaiting_payment",
+      "title": "Status"
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Emitido em"
+    },
+    "cancelled_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Cancelado em"
+    },
+    "cancellation_reason": {
+      "type": "string",
+      "title": "Motivo do Cancelamento"
+    },
+    "receipt_file": {
+      "type": "string",
+      "title": "Arquivo do Recibo"
+    },
+    "reviewed_by_accounting": {
+      "type": "boolean",
+      "default": false,
+      "title": "Revisado pela Contabilidade"
+    },
+    "accounting_review_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "title": "Status de Revis\u00e3o"
+    },
+    "validation_notes": {
+      "type": "string",
+      "title": "Notas de Valida\u00e7\u00e3o"
+    }
+  },
+  "required": [
+    "organization_id",
+    "patient_id",
+    "amount"
+  ]
+}

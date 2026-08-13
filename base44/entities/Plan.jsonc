@@ -1,0 +1,61 @@
+{
+  "name": "Plan",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Nome"
+    },
+    "code": {
+      "type": "string",
+      "title": "C\u00f3digo"
+    },
+    "description": {
+      "type": "string",
+      "title": "Descri\u00e7\u00e3o"
+    },
+    "monthly_price": {
+      "type": "number",
+      "title": "Pre\u00e7o Mensal"
+    },
+    "annual_price": {
+      "type": "number",
+      "title": "Pre\u00e7o Anual"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "title": "Ativo"
+    },
+    "included_modules": {
+      "type": "string",
+      "title": "M\u00f3dulos Inclu\u00eddos (JSON)"
+    },
+    "professional_limit": {
+      "type": "number",
+      "title": "Limite de Profissionais"
+    },
+    "patient_limit": {
+      "type": "number",
+      "title": "Limite de Pacientes"
+    },
+    "storage_limit": {
+      "type": "number",
+      "title": "Limite de Armazenamento (MB)"
+    },
+    "accounting_included": {
+      "type": "boolean",
+      "default": false,
+      "title": "Contabilidade Inclu\u00edda"
+    },
+    "agency_included": {
+      "type": "boolean",
+      "default": false,
+      "title": "Ag\u00eancia Inclu\u00edda"
+    }
+  },
+  "required": [
+    "name",
+    "code"
+  ]
+}

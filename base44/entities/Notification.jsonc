@@ -1,0 +1,94 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string",
+      "title": "Organiza\u00e7\u00e3o"
+    },
+    "user_id": {
+      "type": "string",
+      "title": "Usu\u00e1rio"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "appointment_reminder",
+        "appointment_changed",
+        "payment_pending",
+        "payment_overdue",
+        "receipt_pending",
+        "document_requested",
+        "document_rejected",
+        "period_awaiting",
+        "guide_available",
+        "post_awaiting_approval",
+        "integration_error",
+        "task_assigned"
+      ],
+      "title": "Tipo"
+    },
+    "title": {
+      "type": "string",
+      "title": "T\u00edtulo"
+    },
+    "message": {
+      "type": "string",
+      "title": "Mensagem"
+    },
+    "channel": {
+      "type": "string",
+      "enum": [
+        "in_app",
+        "email",
+        "whatsapp"
+      ],
+      "default": "in_app",
+      "title": "Canal"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "sent",
+        "read",
+        "failed"
+      ],
+      "default": "pending",
+      "title": "Status"
+    },
+    "related_entity": {
+      "type": "string",
+      "title": "Entidade Relacionada"
+    },
+    "related_record_id": {
+      "type": "string",
+      "title": "ID do Registro"
+    },
+    "scheduled_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Agendado para"
+    },
+    "sent_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Enviado em"
+    },
+    "read_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Lido em"
+    },
+    "error_message": {
+      "type": "string",
+      "title": "Erro"
+    }
+  },
+  "required": [
+    "organization_id",
+    "user_id",
+    "type",
+    "title"
+  ]
+}

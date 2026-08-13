@@ -1,0 +1,98 @@
+{
+  "name": "AccountingPeriod",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string",
+      "title": "Organiza\u00e7\u00e3o"
+    },
+    "accounting_firm_id": {
+      "type": "string",
+      "title": "Escrit\u00f3rio Cont\u00e1bil"
+    },
+    "competence": {
+      "type": "string",
+      "title": "Compet\u00eancia (YYYY-MM)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "awaiting_client",
+        "under_review",
+        "adjustment_requested",
+        "approved",
+        "closed"
+      ],
+      "default": "open",
+      "title": "Status"
+    },
+    "total_revenue": {
+      "type": "number",
+      "default": 0,
+      "title": "Receita Total"
+    },
+    "total_expense": {
+      "type": "number",
+      "default": 0,
+      "title": "Despesa Total"
+    },
+    "estimated_result": {
+      "type": "number",
+      "default": 0,
+      "title": "Resultado Estimado"
+    },
+    "estimated_tax": {
+      "type": "number",
+      "default": 0,
+      "title": "Imposto Estimado"
+    },
+    "pending_receipts": {
+      "type": "number",
+      "default": 0,
+      "title": "Recibos Pendentes"
+    },
+    "pending_documents": {
+      "type": "number",
+      "default": 0,
+      "title": "Documentos Pendentes"
+    },
+    "pending_expenses_review": {
+      "type": "number",
+      "default": 0,
+      "title": "Despesas Pendentes"
+    },
+    "opened_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Aberto em"
+    },
+    "submitted_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Enviado em"
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Revisado em"
+    },
+    "approved_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Aprovado em"
+    },
+    "approved_by": {
+      "type": "string",
+      "title": "Aprovado por"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notas"
+    }
+  },
+  "required": [
+    "organization_id",
+    "competence"
+  ]
+}

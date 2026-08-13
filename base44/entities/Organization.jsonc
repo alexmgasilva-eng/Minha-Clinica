@@ -1,0 +1,107 @@
+{
+  "name": "Organization",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Nome"
+    },
+    "trade_name": {
+      "type": "string",
+      "title": "Nome Fantasia"
+    },
+    "organization_type": {
+      "type": "string",
+      "enum": [
+        "pf",
+        "pj"
+      ],
+      "title": "Tipo"
+    },
+    "document_type": {
+      "type": "string",
+      "enum": [
+        "cpf",
+        "cnpj"
+      ],
+      "title": "Tipo de Documento"
+    },
+    "document_number": {
+      "type": "string",
+      "title": "CPF/CNPJ"
+    },
+    "tax_profile": {
+      "type": "string",
+      "enum": [
+        "pf_autonomo",
+        "mei",
+        "simples_nacional",
+        "lucro_presumido",
+        "lucro_real"
+      ],
+      "title": "Perfil Tribut\u00e1rio"
+    },
+    "tax_regime": {
+      "type": "string",
+      "title": "Regime Tribut\u00e1rio"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "suspended",
+        "trial"
+      ],
+      "default": "trial",
+      "title": "Status"
+    },
+    "owner_user_id": {
+      "type": "string",
+      "title": "Propriet\u00e1rio"
+    },
+    "accounting_firm_id": {
+      "type": "string",
+      "title": "Escrit\u00f3rio Cont\u00e1bil"
+    },
+    "plan_id": {
+      "type": "string",
+      "title": "Plano"
+    },
+    "timezone": {
+      "type": "string",
+      "default": "America/Sao_Paulo",
+      "title": "Fuso Hor\u00e1rio"
+    },
+    "currency": {
+      "type": "string",
+      "default": "BRL",
+      "title": "Moeda"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Telefone"
+    },
+    "email": {
+      "type": "string",
+      "title": "E-mail"
+    },
+    "address": {
+      "type": "string",
+      "title": "Endere\u00e7o"
+    },
+    "onboarding_completed": {
+      "type": "boolean",
+      "default": false,
+      "title": "Onboarding Conclu\u00eddo"
+    },
+    "onboarding_step": {
+      "type": "number",
+      "default": 0,
+      "title": "Etapa do Onboarding"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

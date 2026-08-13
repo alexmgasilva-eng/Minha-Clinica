@@ -1,0 +1,98 @@
+{
+  "name": "ProfessionalProfile",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string",
+      "title": "Organiza\u00e7\u00e3o"
+    },
+    "user_id": {
+      "type": "string",
+      "title": "Usu\u00e1rio"
+    },
+    "full_name": {
+      "type": "string",
+      "title": "Nome Completo"
+    },
+    "cpf": {
+      "type": "string",
+      "title": "CPF"
+    },
+    "professional_type": {
+      "type": "string",
+      "enum": [
+        "psicologo",
+        "psicoterapeuta",
+        "neuropsicopedagogo",
+        "outro"
+      ],
+      "title": "Tipo"
+    },
+    "council_name": {
+      "type": "string",
+      "default": "CRP",
+      "title": "Conselho"
+    },
+    "council_number": {
+      "type": "string",
+      "title": "N\u00famero do Conselho"
+    },
+    "council_state": {
+      "type": "string",
+      "title": "Estado do Conselho"
+    },
+    "specialty": {
+      "type": "string",
+      "title": "Especialidade"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Telefone"
+    },
+    "email": {
+      "type": "string",
+      "title": "E-mail"
+    },
+    "public_bio": {
+      "type": "string",
+      "title": "Bio P\u00fablica"
+    },
+    "service_duration_minutes": {
+      "type": "number",
+      "default": 50,
+      "title": "Dura\u00e7\u00e3o da Sess\u00e3o (min)"
+    },
+    "default_session_value": {
+      "type": "number",
+      "title": "Valor Padr\u00e3o da Sess\u00e3o"
+    },
+    "online_service_enabled": {
+      "type": "boolean",
+      "default": true,
+      "title": "Atende Online"
+    },
+    "in_person_service_enabled": {
+      "type": "boolean",
+      "default": true,
+      "title": "Atende Presencial"
+    },
+    "fiscal_profile_completed": {
+      "type": "boolean",
+      "default": false,
+      "title": "Perfil Fiscal Completo"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active",
+      "title": "Status"
+    }
+  },
+  "required": [
+    "organization_id",
+    "full_name"
+  ]
+}

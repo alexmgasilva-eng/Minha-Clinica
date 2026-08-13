@@ -1,0 +1,65 @@
+{
+  "name": "AgencyOnboarding",
+  "type": "object",
+  "properties": {
+    "step_completed": {
+      "type": "number",
+      "default": 0,
+      "title": "Etapa Conclu\u00edda"
+    },
+    "clinic_name": {
+      "type": "string",
+      "title": "Nome da Cl\u00ednica/Profissional"
+    },
+    "specialty": {
+      "type": "string",
+      "title": "Especialidade"
+    },
+    "target_audience": {
+      "type": "string",
+      "title": "P\u00fablico-alvo"
+    },
+    "content_pillars": {
+      "type": "string",
+      "title": "Pilares de Conte\u00fado"
+    },
+    "posting_frequency": {
+      "type": "string",
+      "enum": [
+        "3x_semana",
+        "diario",
+        "5x_semana"
+      ],
+      "title": "Frequ\u00eancia de Posts"
+    },
+    "preferred_tone": {
+      "type": "string",
+      "enum": [
+        "profissional",
+        "acolhedor",
+        "educativo",
+        "motivacional",
+        "informativo"
+      ],
+      "title": "Tom Preferido"
+    },
+    "meta_connected": {
+      "type": "boolean",
+      "default": false,
+      "title": "Meta Conectado"
+    },
+    "instagram_handle": {
+      "type": "string",
+      "title": "Instagram @"
+    },
+    "facebook_page": {
+      "type": "string",
+      "title": "P\u00e1gina do Facebook"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "title": "Onboarding Conclu\u00eddo"
+    }
+  }
+}

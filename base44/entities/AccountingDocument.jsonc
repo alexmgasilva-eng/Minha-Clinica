@@ -1,0 +1,95 @@
+{
+  "name": "AccountingDocument",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string",
+      "title": "Organiza\u00e7\u00e3o"
+    },
+    "accounting_period_id": {
+      "type": "string",
+      "title": "Compet\u00eancia"
+    },
+    "document_type": {
+      "type": "string",
+      "enum": [
+        "comprovante_despesa",
+        "recibo",
+        "nota_fiscal",
+        "guia",
+        "relatorio",
+        "contrato",
+        "documento_cadastral",
+        "contabil",
+        "fiscal"
+      ],
+      "title": "Tipo"
+    },
+    "competence": {
+      "type": "string",
+      "title": "Compet\u00eancia"
+    },
+    "title": {
+      "type": "string",
+      "title": "T\u00edtulo"
+    },
+    "file_url": {
+      "type": "string",
+      "title": "Arquivo"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "solicitado",
+        "enviado",
+        "em_revisao",
+        "aprovado",
+        "recusado",
+        "substituido"
+      ],
+      "default": "solicitado",
+      "title": "Status"
+    },
+    "uploaded_by": {
+      "type": "string",
+      "title": "Enviado por"
+    },
+    "reviewed_by": {
+      "type": "string",
+      "title": "Revisado por"
+    },
+    "uploaded_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Enviado em"
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Revisado em"
+    },
+    "rejection_reason": {
+      "type": "string",
+      "title": "Motivo da Recusa"
+    },
+    "visibility": {
+      "type": "string",
+      "enum": [
+        "all",
+        "accounting_only",
+        "client_only"
+      ],
+      "default": "all",
+      "title": "Visibilidade"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Observa\u00e7\u00f5es"
+    }
+  },
+  "required": [
+    "organization_id",
+    "title",
+    "document_type"
+  ]
+}

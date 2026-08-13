@@ -1,0 +1,67 @@
+{
+  "name": "Subscription",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string",
+      "title": "Organiza\u00e7\u00e3o"
+    },
+    "plan_id": {
+      "type": "string",
+      "title": "Plano"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "trial",
+        "active",
+        "past_due",
+        "cancelled",
+        "suspended"
+      ],
+      "default": "trial",
+      "title": "Status"
+    },
+    "billing_cycle": {
+      "type": "string",
+      "enum": [
+        "monthly",
+        "annual"
+      ],
+      "default": "monthly",
+      "title": "Ciclo de Cobran\u00e7a"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "In\u00edcio"
+    },
+    "trial_ends_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Fim do Trial"
+    },
+    "next_billing_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Pr\u00f3xima Cobran\u00e7a"
+    },
+    "cancelled_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Cancelado em"
+    },
+    "payment_provider": {
+      "type": "string",
+      "title": "Provedor de Pagamento"
+    },
+    "external_subscription_id": {
+      "type": "string",
+      "title": "ID Externo"
+    }
+  },
+  "required": [
+    "organization_id",
+    "plan_id"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "OrganizationMember",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string",
+      "title": "Organiza\u00e7\u00e3o"
+    },
+    "user_id": {
+      "type": "string",
+      "title": "Usu\u00e1rio"
+    },
+    "professional_profile_id": {
+      "type": "string",
+      "title": "Perfil Profissional"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "platform_admin",
+        "organization_owner",
+        "psychologist",
+        "secretary",
+        "financial",
+        "accountant",
+        "accounting_assistant"
+      ],
+      "title": "Papel"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "invited",
+        "suspended"
+      ],
+      "default": "invited",
+      "title": "Status"
+    },
+    "permissions": {
+      "type": "string",
+      "title": "Permiss\u00f5es (JSON)"
+    },
+    "invited_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Convidado em"
+    },
+    "accepted_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Aceito em"
+    },
+    "last_access_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "\u00daltimo acesso"
+    },
+    "full_name": {
+      "type": "string",
+      "title": "Nome"
+    },
+    "email": {
+      "type": "string",
+      "title": "E-mail"
+    }
+  },
+  "required": [
+    "organization_id",
+    "role"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "name": "IntegrationConnection",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string",
+      "title": "Organiza\u00e7\u00e3o"
+    },
+    "provider": {
+      "type": "string",
+      "enum": [
+        "google_calendar",
+        "google_meet",
+        "zoom",
+        "microsoft_teams",
+        "meta_instagram",
+        "meta_facebook",
+        "whatsapp",
+        "email",
+        "payment_provider",
+        "clinical_vault",
+        "external_backend"
+      ],
+      "title": "Provedor"
+    },
+    "connection_type": {
+      "type": "string",
+      "enum": [
+        "oauth",
+        "api_key",
+        "webhook",
+        "manual"
+      ],
+      "title": "Tipo de Conex\u00e3o"
+    },
+    "account_name": {
+      "type": "string",
+      "title": "Nome da Conta"
+    },
+    "account_identifier": {
+      "type": "string",
+      "title": "Identificador"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "not_connected",
+        "pending_config",
+        "awaiting_authorization",
+        "connected",
+        "error",
+        "token_expired",
+        "revoked"
+      ],
+      "default": "not_connected",
+      "title": "Status"
+    },
+    "scopes": {
+      "type": "string",
+      "title": "Escopos"
+    },
+    "connected_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Conectado em"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Expira em"
+    },
+    "revoked_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Revogado em"
+    },
+    "last_sync_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "\u00daltima Sincroniza\u00e7\u00e3o"
+    },
+    "error_message": {
+      "type": "string",
+      "title": "Mensagem de Erro"
+    },
+    "external_reference": {
+      "type": "string",
+      "title": "Refer\u00eancia Externa"
+    }
+  },
+  "required": [
+    "organization_id",
+    "provider"
+  ]
+}

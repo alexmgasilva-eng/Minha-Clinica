@@ -1,0 +1,61 @@
+{
+  "name": "Consent",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string",
+      "title": "Organiza\u00e7\u00e3o"
+    },
+    "patient_id": {
+      "type": "string",
+      "title": "Paciente"
+    },
+    "consent_type": {
+      "type": "string",
+      "enum": [
+        "termo_uso",
+        "lgpd",
+        "prontuario",
+        "videoconsulta",
+        "comunicacao"
+      ],
+      "title": "Tipo de Consentimento"
+    },
+    "document_version": {
+      "type": "string",
+      "title": "Vers\u00e3o do Documento"
+    },
+    "accepted": {
+      "type": "boolean",
+      "default": false,
+      "title": "Aceito"
+    },
+    "accepted_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Aceito em"
+    },
+    "revoked_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Revogado em"
+    },
+    "evidence": {
+      "type": "string",
+      "title": "Evid\u00eancia"
+    },
+    "ip_address": {
+      "type": "string",
+      "title": "IP"
+    },
+    "recorded_by_user_id": {
+      "type": "string",
+      "title": "Registrado por"
+    }
+  },
+  "required": [
+    "organization_id",
+    "patient_id",
+    "consent_type"
+  ]
+}

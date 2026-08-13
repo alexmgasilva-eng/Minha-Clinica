@@ -1,0 +1,90 @@
+{
+  "name": "SocialPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "T\u00edtulo"
+    },
+    "content": {
+      "type": "string",
+      "title": "Conte\u00fado"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "instagram",
+        "facebook",
+        "instagram_facebook"
+      ],
+      "title": "Plataforma"
+    },
+    "post_type": {
+      "type": "string",
+      "enum": [
+        "feed",
+        "stories",
+        "reels",
+        "carrossel"
+      ],
+      "title": "Tipo de Post"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "rascunho",
+        "agendado",
+        "publicado",
+        "erro"
+      ],
+      "default": "rascunho",
+      "title": "Status"
+    },
+    "scheduled_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Agendado para"
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Publicado em"
+    },
+    "image_url": {
+      "type": "string",
+      "title": "Imagem URL"
+    },
+    "hashtags": {
+      "type": "string",
+      "title": "Hashtags"
+    },
+    "theme": {
+      "type": "string",
+      "title": "Tema/Nicho"
+    },
+    "tone": {
+      "type": "string",
+      "enum": [
+        "profissional",
+        "acolhedor",
+        "educativo",
+        "motivacional",
+        "informativo"
+      ],
+      "title": "Tom"
+    },
+    "meta_post_id": {
+      "type": "string",
+      "title": "ID Meta"
+    },
+    "engagement": {
+      "type": "number",
+      "title": "Engajamento"
+    }
+  },
+  "required": [
+    "content",
+    "platform",
+    "status"
+  ]
+}

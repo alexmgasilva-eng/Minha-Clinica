@@ -1,0 +1,90 @@
+{
+  "name": "Patient",
+  "type": "object",
+  "properties": {
+    "organization_id": {
+      "type": "string",
+      "title": "Organiza\u00e7\u00e3o"
+    },
+    "professional_id": {
+      "type": "string",
+      "title": "Profissional Respons\u00e1vel"
+    },
+    "name": {
+      "type": "string",
+      "title": "Nome"
+    },
+    "full_name": {
+      "type": "string",
+      "title": "Nome Completo"
+    },
+    "cpf": {
+      "type": "string",
+      "title": "CPF"
+    },
+    "birth_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Data de Nascimento"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Telefone"
+    },
+    "email": {
+      "type": "string",
+      "title": "E-mail"
+    },
+    "address": {
+      "type": "string",
+      "title": "Endere\u00e7o"
+    },
+    "legal_responsible_name": {
+      "type": "string",
+      "title": "Respons\u00e1vel Legal"
+    },
+    "legal_responsible_cpf": {
+      "type": "string",
+      "title": "CPF do Respons\u00e1vel Legal"
+    },
+    "financial_responsible_id": {
+      "type": "string",
+      "title": "Respons\u00e1vel Financeiro"
+    },
+    "preferred_contact_channel": {
+      "type": "string",
+      "enum": [
+        "whatsapp",
+        "email",
+        "phone"
+      ],
+      "default": "whatsapp",
+      "title": "Canal de Contato Preferido"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "suspended"
+      ],
+      "default": "active",
+      "title": "Status"
+    },
+    "administrative_notes": {
+      "type": "string",
+      "title": "Observa\u00e7\u00f5es Administrativas"
+    },
+    "responsible": {
+      "type": "string",
+      "title": "Respons\u00e1vel (legado)"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Observa\u00e7\u00f5es (legado)"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
